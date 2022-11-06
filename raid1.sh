@@ -1,22 +1,6 @@
-# RAID 1 - Configuration et Installation
 
-Pré-requis : 
-- au moins 2 disques durs de même taille
-- Droits Sudo / Root 
-
-#### Afficher les disques et partitions
-```bash
 lsblk
-```
-
-#### Installer le paquet mdadm 
-```bash
 sudo apt install mdadm -y
-```
-
-#### Création du volume logique raid 1, sélectionner le nombre de disque et leur noms
-
-````bash
 sudo mdadm --create --verbose /dev/md5 --level=1 --raid-devices=2 /dev/nvme1n1 /dev/nvme2n1
 ````
 
