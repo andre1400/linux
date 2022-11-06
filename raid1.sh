@@ -8,5 +8,4 @@ sudo df -hT
 sudo mdadm --detail --scan | sudo tee -a /etc/mdadm/mdadm.conf
 sudo update-initramfs -u
 echo '/dev/md5 /mnt/md5 ext4 defaults,nofail,discard 0 0' | sudo tee -a /etc/fstab
-sudo reboot
 sudo cat /proc/mdstat
