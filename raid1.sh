@@ -1,6 +1,6 @@
 lsblk
 sudo apt install mdadm -y
-sudo mdadm --create --verbose /dev/md5 --level=1 --raid-devices=2 /dev/nvme1n1 /dev/nvme2n1
+sudo echo "yes" | sudo mdadm --create --verbose /dev/md5 --level=1 --raid-devices=2 /dev/nvme1n1 /dev/nvme2n1
 sudo mkfs.ext4 -F /dev/md5
 sudo mount /dev/md5 /mnt
 sudo chmod o+w /mnt
